@@ -7,3 +7,4 @@ puts 'knit ' * 4
 puts 'Extrapolating... can I use arithmetic? Probably. It is smart.'
 puts 'I ' + 'really ' * 3 + 'love wine.'
 puts 'Damn spaces.'
+puts 'Ok, let\'s make an apostrophe!'
