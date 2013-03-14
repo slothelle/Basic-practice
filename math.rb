@@ -10,3 +10,5 @@ puts (rand(10))
 puts ''
 puts ('The weatherman said there is a ' + rand(101).to_s + '% chance of rain.')
 puts 'Do you trust the weatherman, though? I don\'t.'
+puts ''
+puts (Math::PI)
