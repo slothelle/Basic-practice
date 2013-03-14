@@ -24,6 +24,20 @@ puts 'a'.capitalize
 puts letteR
 puts ''
 
+line_width = 60
+puts ('Little miss muffet'.center(line_width))
+puts ('Sat on her tuffet'.center(line_width))
+puts ('Eating her curds and whey'.center(line_width))
+puts ''
+
+tex = 'A B C'
+puts (tex.ljust(line_width))
+puts (tex.rjust(line_width))
+puts (tex.center(line_width))
+puts (tex.ljust(line_width/2) + tex.rjust(line_width/2))
+puts (tex.ljust(line_width/3) + tex.center(line_width/3) + tex.rjust(line_width/3))
+puts ''
+
 puts 'Now we\'ll count characters in your name.'
 puts 'What is your full name?'
 name = gets.chomp
