@@ -1,3 +1,7 @@
+#learn how to program, exercise 6.2
+
+#using chomp to remove 'enter' stroke
+#fancy methods to change user input 
 puts 'Hey, how are you doing today?'
 emote = gets.chomp
 puts 'It\'s always good to hear that someone feels ' + emote + '.'
@@ -8,6 +12,7 @@ follow = gets.chomp
 puts '"' + follow.upcase + '"? Absolutely not. You\'re fired.' 
 puts ''
 
+#formatting things super fancy with line width commands
 line_width = 90
 puts ('Table of Contents'.center(line_width))
 puts ''

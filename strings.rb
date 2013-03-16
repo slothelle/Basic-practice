@@ -1,3 +1,6 @@
+#practice from ruby docs
+#http://www.ruby-doc.org/core-1.9.3/String.html
+
 # str * integer 
 puts "Cheese! " * 3
 

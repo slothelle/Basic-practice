@@ -1,3 +1,11 @@
+#beginnings of a hat knitting pattern generator
+#known issues:
+#positive/negative ease, rounding up and down for CO multiples
+#using modulu?, adjusting for "if" statements
+#converting from inches to cm if needed
+#validating inputs and handling invalid inputs
+#selection of brim pattern to generate custom multiples
+
 puts 'How about we knit a hat?'
 puts 'I think that\'s a good idea.'
 puts 'But I need some information from you first.'

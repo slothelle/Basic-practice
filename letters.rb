@@ -1,3 +1,5 @@
+#testing arithmetic with str
+
 puts 'Hello, my name is Liz.'
 puts ''
 puts 'I am writing lots of basic code while I learn.'

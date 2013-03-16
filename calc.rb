@@ -1,3 +1,5 @@
+#basic calculator
+
 puts 365*24
 puts (24*60)*(365*10)
 puts (24*60*60)*(365*27)

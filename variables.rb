@@ -1,3 +1,5 @@
+#learn how to program, exercise 5.7
+
 marriedName = 'Elizabeth Marie Abinante FitzGerald'
 birthDay = 'October 26'
 puts 'When I get married, my name will be ' + marriedName

@@ -1,3 +1,5 @@
+#fancy math, learn how to program, 6.4
+
 puts 5**2
 puts 5**0.5
 puts 7/3

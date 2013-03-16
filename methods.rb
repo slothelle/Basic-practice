@@ -1,3 +1,5 @@
+#learn how to program, 6.1
+
 puts 'Fancy methods practice'
 puts ''
 
