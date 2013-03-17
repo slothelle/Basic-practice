@@ -75,6 +75,7 @@ puts c.capitalize
 puts c
 puts c.capitalize!
 puts c
+puts c.swapcase
 
 #casecmp similar to str comparison, but is not case sensitive
 puts "hello lala".casecmp("hello la")
@@ -141,10 +142,13 @@ puts "banana".eql?("banana")
 puts "banana".eql?("ananab")
 
 #replacing characters in str
+#gsubreplaces ALL instances of pattern
+#sub replaces only first instance of the pattern
 g = "my little ponies"
 puts g.gsub(/[p]/, 't')
 puts g.gsub(/[my]/, 'm' => 'you', 'y' => 'r')
 puts g.gsub(/[pon]/, 'p' => 'ba', 'o' => 'r', 'n' => 'b')
+puts g.sub(/[i]/, 'a')
 puts g.replace "coffee cup"
 
 #returns decimal number
@@ -166,9 +170,10 @@ puts iI.insert(8, "the world ")
 puts iI.insert(7, " your sandwich")
 
 #removing leading/end white space
-jJ = " I forgot my keys! "
+jJ = "   I forgot my keys!   "
 puts jJ.lstrip
 puts jJ.rstrip
+puts jJ.strip
 
 #successor 
 kK = "abcz"
@@ -188,12 +193,32 @@ nN = "taco cat"
 puts nN.reverse
 
 #scanning for matches
+#splitting up text
 oO = "heaven is a place on earth"
 puts oO.scan(/\w+/)
 puts oO.scan(/......./)
 puts oO.scan(/\w+/) {|w| print "~#{w}~ "}
+puts oO.split
+puts oO.split("place")
 
+#slice
+#deleting parts of the string, and telling you what was deleted
+#different from delete
+#combined with gsub! and prepend
+pP = "writing on the wall"
+puts pP
+pP.slice!(0..9)
+pP.slice!(/w/)
+pP.gsub!(/[a]/, 'ca')
+pP.prepend("waiting for")
+puts pP
 
+#squeeze
+puts "bananananannnnna".squeeze
+puts "how  about  we     go out".squeeze
+puts "whatt a dayy it has been".squeeze("t-y")
+
+#find a match for prefix
 
 
 
