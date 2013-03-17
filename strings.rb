@@ -81,9 +81,14 @@ puts "hello lala".casecmp("hello la")
 puts "hello lala".casecmp("Hello LALA")
 puts "hello lala".casecmp("hello lalala")
 
-#center
+#alignment
 #hey! something i already know! hooray!
 puts "I would like some bacon!".center(100)
+puts "Then get into the kitchen!".ljust(100)
+puts "Brought to you by hunger.".rjust(100)
+puts "Hey!".center(30, ' * ')
+#note that for center to place evenly, it has to be
+#divisble by the number of characters you're filling space with
 
 #passes each character in str to the given block
 #what would this be useful for?
@@ -106,6 +111,87 @@ d = "itsy bitsy spider went up"
 puts d.count "spid"
 puts d.count " wen"
 puts d.count "bit"
+
+#crypt
+#one way encryption
+#how do you decrypt?
+#uses a-z, A-Z, 0-9
+e = "messages in bottle"
+puts e.crypt("aa")
+
+#deleting characters
+f = "once upon a time there was a fairy princess"
+puts (f.delete "aeiou")
+puts (f.delete "y")
+puts (f.delete "ss")
+puts (f.delete "m-t")
+puts (f.delete "rst", "^ess")
+#can also be used with ! to permanently modify str
+
+#true or false?
+puts "casino!".empty?
+puts "".empty?
+puts "---"
+puts "princess".end_with?("cess"+"cat")
+puts "princess".end_with?("p")
+puts "princess".end_with?("es"+"s")
+puts "---"
+puts "banana".eql?("apple")
+puts "banana".eql?("banana")
+puts "banana".eql?("ananab")
+
+#replacing characters in str
+g = "my little ponies"
+puts g.gsub(/[p]/, 't')
+puts g.gsub(/[my]/, 'm' => 'you', 'y' => 'r')
+puts g.gsub(/[pon]/, 'p' => 'ba', 'o' => 'r', 'n' => 'b')
+puts g.replace "coffee cup"
+
+#returns decimal number
+#treats leading characters as a string of hex digits
+#zero is a error
+puts "FF".hex
+puts "1B".hex
+
+#does this live here?
+h = "stop in the name of love"
+puts h.include? "stop"
+puts h.include? "banana"
+puts h.include? "am"
+
+#moving in next door
+#adding characters based on placement
+iI = "what if was flat?"
+puts iI.insert(8, "the world ")
+puts iI.insert(7, " your sandwich")
+
+#removing leading/end white space
+jJ = " I forgot my keys! "
+puts jJ.lstrip
+puts jJ.rstrip
+
+#successor 
+kK = "abcz"
+puts kK.succ
+
+#breaking up str into partitions 
+lL = "buffalo"
+puts lL.partition("f")
+
+#prepend
+#add something to the front of a str
+mM = "bring me the cheese?"
+puts mM.prepend("Will you ")
+
+#reverse
+nN = "taco cat"
+puts nN.reverse
+
+#scanning for matches
+oO = "heaven is a place on earth"
+puts oO.scan(/\w+/)
+puts oO.scan(/......./)
+puts oO.scan(/\w+/) {|w| print "~#{w}~ "}
 
 
 
