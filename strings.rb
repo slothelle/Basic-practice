@@ -76,6 +76,8 @@ puts c
 puts c.capitalize!
 puts c
 puts c.swapcase
+puts c.upcase
+puts c.downcase
 
 #casecmp similar to str comparison, but is not case sensitive
 puts "hello lala".casecmp("hello la")
@@ -149,7 +151,12 @@ puts g.gsub(/[p]/, 't')
 puts g.gsub(/[my]/, 'm' => 'you', 'y' => 'r')
 puts g.gsub(/[pon]/, 'p' => 'ba', 'o' => 'r', 'n' => 'b')
 puts g.sub(/[i]/, 'a')
+puts '---'
 puts g.replace "coffee cup"
+puts g.tr('up', 'at')
+puts g.tr('a-y', 'b-z')
+puts g.tr_s('fe', 're')
+#it to_str is shorter than from_str, you're SOL
 
 #returns decimal number
 #treats leading characters as a string of hex digits
@@ -218,7 +225,16 @@ puts "bananananannnnna".squeeze
 puts "how  about  we     go out".squeeze
 puts "whatt a dayy it has been".squeeze("t-y")
 
-#find a match for prefix
+#to_c - complex
+#to_f - float
+#to_i - base 10 integer
+#to_r - rational
+#to_s - str
 
-
-
+#up to - going through successive values until stopped
+puts "k7".upto("l9") {|s| print s, ' ' }
+for s in "k7".."l9"
+  print s, ' '
+end 
+puts ' '
+puts "9".upto("21").to_a 
