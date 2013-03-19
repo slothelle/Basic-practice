@@ -18,3 +18,35 @@ puts do_something("Alex", 42, 12)
 first_name = "Ken"
 num = 15
 puts do_something(first_name, num, 21)
+
+#determining the return values
+
+#true/false
+def divisible_by_three(num)
+	num % 3 == 0
+end
+
+puts divisible_by_three(9)
+puts divisible_by_three(10)
+
+#if/else with return values
+def cool_number(num1, num2)
+	if num1 * num2 == 42
+		return "cool"
+	else 
+		return "not cool"
+	end
+end 
+
+puts cool_number(4, 4)
+puts cool_number(4, 6)
+puts cool_number(7, 6)
+
+#won't ever run because it is after the return 
+def do_something2
+	value = "This method outputs a string"
+	return value
+	"This line will never be run"
+end
+
+puts do_something2
