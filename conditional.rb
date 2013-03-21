@@ -7,3 +7,7 @@ puts (2+1) >= 7
 
 #determines inequality 
 puts 3 != 7
+
+#common mistake to use = as comparison
+#= is for assignment
+#== is for comparison
