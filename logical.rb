@@ -40,3 +40,10 @@ price = 120
 tax = 0.05
 income = 50
 puts (cost > price && price < tax && tax > income * 0.5)
+#
+#short circuiting 
+#if there is a series of conditional statematents using && and the first is false,
+#it will automatically result in false, so it skips the rest of the code
+#with ||, it will skip and automatically result in true if the first is true
+#can use short circuiting to avoid bad things like diving by 0:
+denominator != 0 && 10/denominator < 100
