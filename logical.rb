@@ -31,3 +31,5 @@ temperature = 99
 pressure = 20
 volume = 250
 puts (temperature < 100 || pressure < 20 || volume >= 250)
+
+#should be false because first condition is false, using &&
