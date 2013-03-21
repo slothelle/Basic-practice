@@ -24,6 +24,7 @@ end
 puts greeting("Barack", "obama") 
 puts greeting("QUEEN", "elizabeth")
 
+#knitting pattern generator
 def cast_on(gauge, circ)
 	instruct = gauge.to_i * circ.to_i
 	return "With a gauge of " + gauge.to_s + " stitches per inch, you should cast on " + instruct.to_s + " stitches."
