@@ -27,3 +27,7 @@ width = 280
 puts !(height < 100 || width > 275)
 
 #true because of the or operator
+temperature = 99
+pressure = 20
+volume = 250
+puts (temperature < 100 || pressure < 20 || volume >= 250)
