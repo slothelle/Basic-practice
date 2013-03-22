@@ -1,6 +1,3 @@
-#you can write your own methods
-#anytime you have an action you want to perform, define it as a method
-
 #syntax for defining methods
 def method_name(parameter list)
 	# ...one or more statements...
