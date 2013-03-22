@@ -8,8 +8,6 @@ def valid_triangle?(a, b, c)
     return true
   elsif ((a+2*b+2*c) && (2*a+b+2*c) && (2*a+2*b+3*c))
     return true
-  elsif (a + b > c)
-    return false
   else
     return false
   end
