@@ -102,3 +102,61 @@ puts "2012-12-31".split('-').inspect
 puts "foobar".split('').inspect
 #["f", "o", "o", "b", "a", "r"]
 #
+#
+#[array].push (same as array <<)
+#appends (or pushes!) a new element at the end of the array and returns a new longer array
+#modifies the array! be careful!
+array = [1,2,3]
+array.push("cats")
+puts "The array was [1,2,3], but it's now #{array.inspect}"
+#or
+array = [1,2,3]
+array << "cats"
+puts "The array way [1,2,3], but it's now #{array.inspect}"
+#The array was [1,2,3], but it's now [1, 2, 3, "cats"]
+#
+array = []
+array.push(true)
+puts "The array way empty, but it's now #{array.inspect}"
+#or
+array = []
+array << true
+puts "The array was empty, but it's now #{array.inspect}"
+#The array way empty, but it's now [true]
+#
+#
+#[array].pop
+#opposite of push - removes last element of array and returns element removed
+array = [1,2,3]
+last_element = array.pop
+array
+puts "The last element of the array was #{last_element} and the array is now #{array.inspect}."
+#
+#
+#[array].unshift
+#just like push, but for the beginning
+#adds something new to the front of the string
+array = [1,2,3]
+array.unshift("cats")
+puts "The array was [1,2,3], but it's now #{array.inspect}."
+#
+array = []
+array.unshift(true)
+puts "The array was empty, but it's now #{array.inspect}."
+#
+#
+#[array].shift
+#just like pop, but for the beginning
+#removes the first element and then returns it
+array = [1,2,3]
+first_element = array.shift
+puts "The first element of the array was #{first_element} and the array is now #{array.inspect}."
+#
+#
+#concatenating arrays
+#you can add arrays together just like strings
+array1 = [1,2,3]
+array2 = ['cats', 'dogs']
+array_sum = array1 + array2
+puts "#{array1.inspect} + #{array2.inspect} is #{array_sum.inspect}."
+#
