@@ -48,3 +48,19 @@ puts person.has_value?(4)
 puts person.has_value?('Carter')
 puts person.has_value?(:Blue_Ivy)
 puts person.has_value?([1,2,3])
+#
+#
+#hash#merge - takes another hash as input and returns a new hash after merging
+#if two hashes share a key, value from the (passed-in hash) wins and gets the key
+hash1 = {:first_name => 'Nancy'}
+hash2 = {:last_name => 'Drew'}
+hash3 = hash1.merge(hash2)
+puts hash3
+#
+hash1 = {:email => 'liz@feministy.com', :age => 100}
+hash2 = {:age => 25}.merge(hash1)
+puts hash2
+#
+hash1 = {:first_name => 'Nancy'}
+hash2 = {'first_name' => 'Frank'}
+hash3 = hash1.merge(hash2)
