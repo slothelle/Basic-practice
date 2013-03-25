@@ -64,3 +64,9 @@ puts hash2
 hash1 = {:first_name => 'Nancy'}
 hash2 = {'first_name' => 'Frank'}
 hash3 = hash1.merge(hash2)
+#
+#hash#merge is like telling the hash to add keys and values to itself, but if it already has one of the keys, to use the new value
+#
+#
+#see remaining methods
+#http://www.ruby-doc.org/core-1.9.3/Hash.html
