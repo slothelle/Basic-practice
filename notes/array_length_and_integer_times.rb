@@ -65,7 +65,33 @@ end
 #Because months[i] is a string, you can use any string methods on it
 #This prints the months in order, spelled backwards
 #Practice this some more!
+#
+#
+#
+#Arbitary Arrays
+#We don't know the specific contents of an array before it's given
+#Example: arbitrary array of integets and retruning a new array where we add 10 to each element
+#
+#This is what we want:
+add_ten_to_each([0,1,2])
+#
+#This is how we get it:
+def add_ten_to_each(array)
+  new_array = []
 
+  array.length.times do |i|
+    new_array[i] = array[i] + 10
+  end
+
+  new_array
+end
+
+my_array = [1,2,3,4,5]
+puts "my_array is #{my_array.inspect}"
+
+other_array = add_ten_to_each(my_array)
+puts "other_array is now #{other_array.inspect}"
+#
 
 
 
