@@ -92,6 +92,40 @@ puts "my_array is #{my_array.inspect}"
 other_array = add_ten_to_each(my_array)
 puts "other_array is now #{other_array.inspect}"
 #
+#
+#This is what we want: array_sum
+#takes its input as an Array of integers and returns their sum
+#empty arrays return 0
+array_sum([10, 20, 30, 100])
+array_sum([])
+array_sum([-1, 1])
+#
+#This is how we get it:
+def array_sum(array)
+  sum_so_far = 0
+
+  array.length.times do |i|
+    sum_so_far = sum_so_far + array[i]
+  end
+
+  sum_so_far
+end
+
+puts array_sum([10, 20, 30, 100])
+puts array_sum[()]
+puts array_sum[[-1, 1]]
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
