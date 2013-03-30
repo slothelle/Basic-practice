@@ -114,20 +114,28 @@ end
 puts array_sum([10, 20, 30, 100])
 puts array_sum[()]
 puts array_sum[[-1, 1]]
+#
+#
+#This is what we want: array_reverse
+#takes its input as an Array of strings and returns a new array of reversed strings
+#This is how we get it:
+def array_reverse(array)
+  results = []
 
+  array.length.times do |k|
+    results[k] = array[k].reverse
+  end
 
+  results
+end
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+puts array_reverse(['racecar']).inspect
+puts array_reverse(['Nancy Drew', 'Frank Hardy']).inspect
+puts "---"
+my_array = ['pineapple', 'mango', 'coconut']
+puts ""
+puts "What if we call an array_reverse twice, on itself?"
+puts "Here is once... #{array_reverse(my_array).inspect}."
+puts "Here is twice... #{array_reverse(array_reverse(my_array)).inspect}."
+#
+#
