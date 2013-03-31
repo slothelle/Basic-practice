@@ -6,6 +6,10 @@
 #Multiples of 3 should be replaced with the string "Fizz"
 #Multiples of 5 should be replaced with the string "Buzz"
 #Multiples of 15 should be replaced with the string "FizzBuzz"
+#
+#
+#
+#Not the most eloquent, but I did it all on my own. 
 
 def super_fizzbuzz(array)
   array.collect do |var|
