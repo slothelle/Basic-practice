@@ -45,6 +45,15 @@ puts "array[2] is now #{array[2]}"
 #
 #
 #
+#you can also assign things to the slots in your array
+#they don't have to be in order
+#example
+my_array = []
+my_array[3] = "cheese"
+my_array[0] = "milk"
+my_array[2] = "bread"
+my_array[1] = "rice"
+puts my_array
 #
 #
 #
