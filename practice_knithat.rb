@@ -1,34 +1,30 @@
-#beginnings of a hat knitting pattern generator
-#known issues:
-#positive/negative ease, rounding up and down for CO multiples
-#using modulu?, adjusting for "if" statements
-#converting from inches to cm if needed
-#validating inputs and handling invalid inputs
-#selection of brim pattern to generate custom multiples
-#
-puts 'How about we knit a hat?'
-puts 'I think that\'s a good idea.'
-puts 'But I need some information from you first.'
-puts ''
-puts 'What is your gauge? (The number of stitches per inch)'
+#Incorporate a loop in here to prompt user to answer questions correctly
+
+puts "Knitting pattern generator (prototype!)"
+puts "We're going to try and make a hat pattern."
+puts "What is your gauge? (The number of stitches per inch)"
 gauge = gets.chomp
-puts ''
-puts 'Great. Now, what is the circumference of your head? In inches, please.'
-head = gets.chomp
-puts ''
-puts 'I\'m not smart enough to round up or take positive and negative ease into account (yet), but I will be soon.'
-puts 'So for now, you have to round on your own to get the right multiple.'
-puts 'But here is your knitting pattern. Sort of. It will get better when I get better at Ruby.'
-puts ''
-cO = gauge.to_i * head.to_i
-line_width = 90
-puts ('My Hat Pattern'.center(line_width))
-puts ''
-puts 'Using a 16 inch circular needle, CO ' + cO.to_s + ' sts.'
-puts 'PM and join for knitting in the round.'
-puts 'Work hat band in chosen motif (k2, p2 ribbing, for example) for approximately 2 inches.'
-puts 'For the hat body, k all sts for every round until hat measures 2" from the top of your head.'
-#
+puts "What is the circumference of your head?"
+circumference = gets.chomp
+puts "Are you going to use a 1x1 or 2x2 ribbing for your border?"
+ribbing = gets.chomp
+puts "Ok, I'm thinking. Give me a minute!"
+puts ""
+
+def hat(gauge, circumference, ribbing)
+  if ribbing == "1x1"
+    #you'll need a multiple of 2, check gauge math
+  elsif ribbing == "2x2"
+    #you'll need a multiple of 4, check gauge math
+  else
+    puts "Please choose a 1x1 or 2x2 ribbed border."
+  end
+end
+
+puts "A hat pattern for me"
+puts "By me, and Ruby"
+puts ""
+
 #
 #
 #
