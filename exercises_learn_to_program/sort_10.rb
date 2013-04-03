@@ -11,6 +11,8 @@
 #Need to use the wrapper method
 #Wraps up another method into another
 #
+#Important to do this without modifying the original array?
+#
 
 def sort(array)
   recursive_sort(array, [])
