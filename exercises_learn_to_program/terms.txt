@@ -1,0 +1,6 @@
+refractor - rewriting code to make it better
+kludge - duct tape, quick fix
+unit test - smallest piece of code you can test on its own
+agile - methodology - favors user needs over features
+
+the stack - http://skillcrush.com/2013/01/10/the-stack/
