@@ -14,7 +14,7 @@ class GuessingGame
   end
 
   def answer
-    1 + rand(100)
+    1 + rand(101)
   end
 
   def solved?
@@ -26,22 +26,13 @@ class GuessingGame
   end
 
   def guess(recent_guess)
-    guesses = []
+    return :correct if recent_guess == answer
 
-    recent_guess.times do
-      guesses << self.guesses
-    end
-
-    return :correct if guesses.last == answer
-
-    if guesses.last < answer
+    if recent_guess < answer
       return :low
-    elsif guesses.last > answer 
+    elsif recent_guess > answer 
       return :high
     end
-
-    guesses
-
   end
 
 end
