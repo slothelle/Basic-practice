@@ -25,4 +25,8 @@ puts nancy.first_name
 # NoMethodError: undefined method `first_name' for #<Person:0x007f86 @first_name="Nancy", @last_name="Drew">
 
 # NoMethodError is telling us that we're trying to call a method (first_name)
+<<<<<<< HEAD
 # on an object (nancy), but that object hasn’t defined any method with that name
+=======
+# on an object (nancy), but that object hasn’t defined any method with that name
+>>>>>>> new
