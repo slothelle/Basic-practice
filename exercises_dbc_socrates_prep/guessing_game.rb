@@ -8,7 +8,7 @@
 # the most recent guess was correct and false otherwise.
 
 class GuessingGame
-  def initialize(guess)
+  def initialize(answer)
     @guess = guess
     @answer = answer 
   end
