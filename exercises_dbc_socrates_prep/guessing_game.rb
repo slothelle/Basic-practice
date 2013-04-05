@@ -25,17 +25,16 @@ class GuessingGame
         @guesses.push self.guesses
       end 
 
-    return :correct if @guesses == @answer
-    return :high if @guesses > @answer
-    return :low if @guesses < @answer
+    return :correct if @guesses.last == @answer
+    return :high if @guesses.last > @answer
+    return :low if @guesses.last < @answer
 
     guesses
   end 
   end
 
   def solved?
-    return true if @guesses == @answer
-    return false if @guesses != @answer
+    return true if @guesses.last == @answer
   end
 
 end
