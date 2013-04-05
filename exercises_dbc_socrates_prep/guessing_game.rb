@@ -12,6 +12,43 @@ class GuessingGame
     @answer = answer 
   end
 
+  def guesses
+    guesses = []
+    @guesses = guesses 
+  end
+
+  def guess(recent_guess)
+    @guesses = []
+
+    until solved? == true
+      recent_guess.times do 
+        @guesses.push self.guesses
+      end 
+
+    return :correct if @guesses == @answer
+    return :high if @guesses > @answer
+    return :low if @guesses < @answer
+
+    guesses
+  end 
+  end
+
+  def solved?
+    return true if @guesses == @answer
+    return false if @guesses != @answer
+  end
+
+end
+
+#
+#
+#
+
+class GuessingGame
+  def initialize(answer)
+    @answer = answer 
+  end
+
   def guess
     @recent_guess = guess
   end
@@ -28,7 +65,6 @@ class GuessingGame
   end
 
 end
-
 
 # Example (1)
 game = GuessingGame.new(10)

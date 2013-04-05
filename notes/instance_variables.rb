@@ -157,8 +157,4 @@ twenty_die = Die.new(20)
 p six_die.multiple_rolls(10)
 
 # This will return a 10 element array with results form a 20 sided die
-<<<<<<< HEAD
 p twenty_die.multiple_rolls(10)
-=======
-p twenty_die.multiple_rolls(10)
->>>>>>> new
