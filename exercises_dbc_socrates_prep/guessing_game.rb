@@ -9,23 +9,22 @@
 
 class GuessingGame
   def initialize(answer)
-    @guess = guess
     @answer = answer 
   end
 
-  def answer
-    1 + rand(101)
+  def guess
+    @recent_guess = guess
   end
 
   def guess(recent_guess) # Add an array to capture guesses and only analyze most recent guess 
-    return :correct if recent_guess == answer
-    return :high if recent_guess > answer
-    return :low if recent_guess < answer
+    return :correct if recent_guess == @answer
+    return :high if recent_guess > @answer
+    return :low if recent_guess < @answer
   end
 
   def solved?
-    return true if @recent_guess == answer
-    return false if @recent_guess != answer
+    return true if @recent_guess == @answer
+    return false if @recent_guess != @answer
   end
 
 end
