@@ -1,3 +1,6 @@
+# Simple height conversion from inches to centimeters, 
+# inches to meters, and centimeters to meters with centimeters remaining
+
 my_name = 'Liz Abinante'
 my_age = 27
 my_height_inches = 65
