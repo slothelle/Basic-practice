@@ -9,60 +9,26 @@
 
 class GuessingGame
   def initialize(answer)
-    @answer = answer 
+    @answer = answer
   end
 
-  def guesses
-    guesses = []
-    @guesses = guesses 
+  def guess(recent_guess) 
+
+    guess_array = []
+
+    guess_array.push(recent_guess)
+    test_guess = guess_array.last
+    @test_guess = test_guess
+
+    return :correct if test_guess == @answer
+    return :high if test_guess > @answer
+    return :low if test_guess < @answer
   end
-
-  def guess(recent_guess)
-    @guesses = []
-
-    until solved? == true
-      recent_guess.times do 
-        @guesses.push self.guesses
-      end 
-
-    return :correct if @guesses.last == @answer
-    return :high if @guesses.last > @answer
-    return :low if @guesses.last < @answer
-
-    guesses
-  end 
-  end
-
+ 
   def solved?
-    return true if @guesses.last == @answer
+    @test_guess == @answer
   end
-
-end
-
-#
-#
-#
-
-class GuessingGame
-  def initialize(answer)
-    @answer = answer 
-  end
-
-  def guess
-    @recent_guess = guess
-  end
-
-  def guess(recent_guess) # Add an array to capture guesses and only analyze most recent guess 
-    return :correct if recent_guess == @answer
-    return :high if recent_guess > @answer
-    return :low if recent_guess < @answer
-  end
-
-  def solved?
-    return true if @recent_guess == @answer
-    return false if @recent_guess != @answer
-  end
-
+ 
 end
 
 # Example (1)
