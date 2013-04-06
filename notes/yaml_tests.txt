@@ -1,0 +1,29 @@
+--- 
+- |
+  Favorite things: 
+  
+  	> Kittens
+  	> Brown paper packages
+  	> Ribbons
+  	> Kiwi 
+
+- |
+  Favorite foods: 
+  
+  	> Cheese
+  	> Wine
+  	> Potatoes
+  	> Pineapple 
+
+- |
+  Favorite times to eat said foods: 
+  
+  	> Breakfast
+  	> Lunch
+  	> Dinner
+  	> High tea 
+
+- |-
+  Favorite people: 
+  
+  	> Colin
