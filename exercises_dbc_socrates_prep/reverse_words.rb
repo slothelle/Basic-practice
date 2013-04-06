@@ -6,6 +6,7 @@ def reverse_words(str)
   
   if str.length >= 1
     str_array = str.split(/\W+/)
+    str_array.collect { |word| word.reverse }.join(' ')
   else
     return ""
   end
