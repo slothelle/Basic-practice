@@ -53,8 +53,4 @@ total_centimeters = (centimeters % 100).to_i
 some_math = (centimeters - total_centimeters).to_i
 total_meters = some_math % 99
 
-<<<<<<< HEAD
 puts "65 inches is #{total_meters} meters and #{total_centimeters} centimeters."
-=======
-puts "65 inches is #{total_meters} meters and #{total_centimeters} centimeters."
->>>>>>> updated
