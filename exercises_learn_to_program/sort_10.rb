@@ -15,66 +15,29 @@
 #
 
 def sort(array)
-  recursive_dict_sort(array, [])
-end
-
-def recursive_dict_sort(unsorted, sorted)
-  if unsorted.length <= 0
-    puts "I can't sort this, there are no words!"
-  end
-
-  unsorted_list = unsorted # Renaming to prevent modifying original array
-  smallest = unsorted_list.pop 
-  still_unsorted = []
-
-  unsorted_list.each do |test_word|
-    if test_word.downcase < smallest.downcase
-      still_unsorted.push smallest
-      smallest = test_word
-    else
-      still_unsorted.push smallest 
-      smallest = test_word
-    end
-  end
-
-sorted.push smallest
-recursive_dict_sort(still_unsorted, sorted)
-
-end
-
-#push, pop and if/else statements to examine contents of the array 
-#and sort it accordingly 
-#
-#how do you get things out of the array?
-#you use each do 
-#
-
-#Make this into a dictionary sort
-
-def sort(array)
   recursive_sort(array, [])
 end
 
-def recursive_dict_sort(unsorted, sorted)
+def recursive_sort(unsorted, sorted)
   if unsorted.length <= 0
-    puts "I can't sort this, there are no words!"
+    return sorted
   end
 
-  unsorted_list = unsorted # Renaming to prevent modifying original array
-  smallest = unsorted_list.pop 
   still_unsorted = []
-
-  unsorted_list.each do |test_word|
-    if test_word < smallest 
-      still_unsorted.push smallest
+  smallest = unsorted.pop
+  
+  unsorted.each do |test_word|
+    if test_word < smallest
+      still_unsorted.push(smallest)
       smallest = test_word
     else
-      still_unsorted.push smallest 
-      smallest = test_word
+      still_unsorted.push(test_word)
     end
   end
 
-sorted.push smallest
-recursive_dict_sort(still_unsorted, sorted)
-
+sorted.push(smallest)
+recursive_sort(still_unsorted, sorted)
 end
+
+my_array = ["cat", "bird", "dog", "beast", "elephant", "anteater"]
+sort(my_array)
