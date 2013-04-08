@@ -319,7 +319,16 @@ ary.count { |x| x%2 == 0 } #=> 3
 # (19)
 cycle(n=nil) { |obj| block } → nil 
 cycle(n=nil) → Enumerator
+# Calls the given block for each element n times for forever if nil is given
+# Does nothing is a non-positive number is given or the array is empty
+# Returns nil if loop has finished without getting interrupted 
+# If no block is given, an Enumerator is returned instead
+a = ["a", "b", "c"]
+a.cycle { |x| puts x }     # print, a, b, c, a, b, c,.. forever.
+a.cycle(2) { |x| puts x }  # print, a, b, c, a, b, c.
 
+# Pick up here:
+# http://www.ruby-doc.org/core-2.0/Array.html#method-i-delete
 
 
 
