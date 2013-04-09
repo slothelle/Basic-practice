@@ -1,5 +1,7 @@
 # http://tutorials.jumpstartlab.com/projects/encryptor.html
 
+# Single letters only
+
 class Encryptor
 
   def cipher
@@ -33,14 +35,6 @@ e.encrypt_letter('N') # => "a"
 class Encryptor
   
   def cipher
-<<<<<<< HEAD
-    {'a' => 'n', 'b' => 'o', 'c' => 'p', 'd' => 'q', 'e' => 'r',
-      'f' => 's', 'g' => 't', 'h' => 'u', 'i' => 'v', 'j' => 'w',
-      'k' => 'x', 'l' => 'y', 'm' => 'z', 'n' => 'a', 'o' => 'b',
-      'p' => 'c', 'q' => 'd', 'r' => 'e', 's' => 'f', 't' => 'g',
-      'u' => 'h', 'v' => 'i', 'w' => 'j', 'x' => 'k', 'y' => 'l',
-      'z' => 'm'}
-=======
     {'a' => 'n', 'b' => 'o', 'c' => 'p', 'd' => 'q', 
       'e' => 'r', 'f' => 's', 'g' => 't', 'h' => 'u',
       'i' => 'v', 'j' => 'w', 'k' => 'x', 'l' => 'y',
@@ -48,7 +42,6 @@ class Encryptor
       'q' => 'd', 'r' => 'e', 's' => 'f', 't' => 'g',
       'u' => 'h', 'v' => 'i', 'w' => 'j', 'x' => 'k',
       'y' => 'l', 'z' => 'm'}
->>>>>>> new
     end
     
     def encrypt_letter(letter)
@@ -68,8 +61,5 @@ e = Encryptor.new
 
 my_string = "a rat in the house might eat the ice cream"
 
-<<<<<<< HEAD
 encrypt(my_string)
-=======
-encrypt(my_string)
->>>>>>> new
+
