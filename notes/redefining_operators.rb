@@ -108,4 +108,46 @@ puts Rectangle.new(100, 10) == Rectangle.new(10, 100) # => true
 
 # Other Boolean Operators 
 
+# < and >
+# We can redefine these to determine if the distance covered by trip1 < trip2
+ trip1 < trip2
 
+ class Trip
+  def distance
+    # Return the length of the trip in miles
+  end
+
+  def <(other)
+    # Return true if this trip's distance is less than the other's
+    self.distance < other.distance
+  end
+
+  def >(other)
+    self.distance > other.distance
+  end
+end
+
+#
+#
+#
+
+# to_s
+# One of the more useful methods to redfine
+# Example
+
+class Person
+  attr_accessor :first_name, :last_name
+
+  def initialize(first_name, last_name)
+    @first_name = first_name
+    @last_name = last_name
+  end
+
+  def to_s
+    "#{first_name} #{last_name}"
+    # Takes two variables and combines them into one
+  end
+end
+
+person = Person.new('John', 'Adams')
+puts "Hello, I'm #{person}."
