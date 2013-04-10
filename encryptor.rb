@@ -23,11 +23,11 @@ class Encryptor
   def encrypt_string(string)
     letters = string.split("")
 
-    letters.collect do |l|
+    my_encryption = letters.collect do |l|
       encrypt_letter(l).to_s
     end
 
-    letters.join      
+    my_encryption.join      
   end
     
 end
