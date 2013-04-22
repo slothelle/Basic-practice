@@ -327,9 +327,125 @@ a = ["a", "b", "c"]
 a.cycle { |x| puts x }     # print, a, b, c, a, b, c,.. forever.
 a.cycle(2) { |x| puts x }  # print, a, b, c, a, b, c.
 
-# Pick up here:
-# http://www.ruby-doc.org/core-2.0/Array.html#method-i-delete
+#
 
+# (20)
+delete(obj) #=> obj or nil
+delete(obj) {block} #=> obj or nil
+# Deletes items from self that are equal to obj. If items are found, returns
+# obj. If items are not found, returns nil. 
+# If code block is given, returns result of block if item is not found.
+a = ["a", "b", "c", "d", "e"]
+a.delete("b") #=> ["a", "c", "d", "e"]
+a.delete("z") { "not found" } #=> "not found"
+
+#
+
+# (21)
+delete_at(index)
+# Self explanatory 
+a = ["a", "b", "c", "d", "e"]
+a.delete_at(2) #=> ["a", "b", "d", "e"]
+
+#
+
+# (22)
+delete_if {|item| block} # returns array
+delete_if # use enumerator 
+# Deletes every element of self that the block evaluates true for.
+# Array is changed every time the block is called, not after the iteration is over.
+# Can be used with an enumerator instead:
+a = ["a", "b", "c"]
+a.delete_if { |x| x >= "b" } # returns ["a"]
+
+#
+
+# (23)
+drop(n) # returns new array
+# Drops the first n elements and returns the rest of the elements in the array
+a = [1, 2, 3, 4, 5]
+a.drop(3) # returns [4, 5]
+
+#
+
+# (24)
+drop_while {|array| block} # returns new array
+drop_while # use enumerator
+# Drops elements up to, but not including, the first element for which the
+# block returns nil or false. Returns array containing remaining elements.
+# Can us an enumerator:
+a = [1, 2, 3, 4, 5, 0]
+a.drop_while {|i| i < 3} # returns [3, 4, 5, 0]
+
+#
+
+# (25)
+each {|item| block} # returns array
+each # use enumerator
+# Calls block once for each element in self, passing that element as a parameter.
+# If no block is given, an enumerator is returned.
+a = ["a", "b", "c"]
+a.each {|x| print x, " -- "} # returns a -- b -- c -- 
+
+#
+
+# (26)
+each_index { |index| block} # returns array
+each_index # use enumerator
+# Same as Array#each but passes the index of the element instead of the element
+# itself. Can use an enumerator instead.
+a = ["a", "b", "c"]
+a.each_index { |x| print x " -- "} # returns 0 -- 1 -- 2
+
+#
+
+# (27)
+empty? # returns true or false
+
+#
+
+# (28)
+eql?(other) # returns true or false
+# Only returns true if arrays have same content, or it is the same array
+
+#
+
+# (29)
+fetch(index) # returns obj
+fetch(index, default) # returns obj
+fetch(index) { |index| block } # returns obj
+# Tries to return the element at position index. 
+# If index is outside of array, the first one throws IndexError exception.
+# Second returns default
+# Third returns the value of invoking the block, passing the index
+# Negative values of index count from the end of the array
+# Does NOT remove item from array!!
+a = [11, 22, 33, 44]
+a.fetch(1) # 22
+a.fetch(-1) # 44
+a.fetch(4, 'cat') # 'cat'
+a.fetch(4) { |i| i*i } # 16
+
+#
+
+# (30)
+fill(obj) # returns array
+fill(obj, start [, length]) # returns array
+fill(obj, range) # returns array
+fill { |index| block } # returns array
+fill(start [, length]) { |index| block } # returns array
+fill(range) { |index| block } # returns array 
+# First three forms: set selected elements of self (can be array) to obj
+# A start of nil is equivalent to zero. A length of nil is equivalent to self.length
+# Last three forms: fill array with the value of the block
+# Block is passed the absolute index of each element to be filled
+# Negative values count from the end of array
+a = ["a", "b", "c", "d"]
+a.fill("x") # ["x", "x", "x", "x"]
+a.fill("z", 2, 2) # ["x", "x", "z", "z"]
+a.fill("y", 0..1) # ["y", "y", "z", "z"]
+a.fill { |i| i*i } # [0, 1, 4, 9]
+a.fill(-2) { |i| i*i*i } # [0, 1, 8, 27]
 
 
 
