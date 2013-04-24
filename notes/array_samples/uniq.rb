@@ -5,5 +5,3 @@ puts "Original array not modified: #{arr.inspect}"
 # uniq! will modify the original array
 # uniq will NOT modify the original array
 
-# Used with a block: 
-arr.uniq { |word| word.reverse }
