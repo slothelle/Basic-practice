@@ -1,13 +1,10 @@
 # Inspired by: https://github.com/feministy/codecademy-practice/blob/master/rock-paper-scissors.js
 # And: https://github.com/feministy/Basic-practice/blob/master/exercises_dbc_socrates_prep/die_class_2_symbols.rb
 
-# Inspired by: https://github.com/feministy/codecademy-practice/blob/master/rock-paper-scissors.js
-# And: https://github.com/feministy/Basic-practice/blob/master/exercises_dbc_socrates_prep/die_class_2_symbols.rb
-
 class RockPaperScissors
 
   attr_accessor :user 
-  
+
   def initialize
     @computer = computer
     @user = user
