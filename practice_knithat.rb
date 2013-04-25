@@ -1,6 +1,7 @@
 class Hat
 
   attr_accessor :gauge_inch, :gauge_row, :circumference, :needle
+  attr_reader :cast_on
 
     # Add list of private/public methods
 
@@ -9,31 +10,48 @@ class Hat
     @gauge_row = gauge_row
     @circumference = circumference
     @needle = needle
-    end
-
-    # Private 
-  def cast_on
-    @gauge_inch.to_i * @circumference.to_i
   end
 
-    # Private
-  def ribbing_type 
-    # Can this be cleaner?
-    if cast_on % 4 == 0
-      return "your choice of: (a) k2, p2, (b) k3, p1, or (c) k1, p1"
-    elsif cast_on % 2 == 0
-      return "k1, p1"
-    elsif cast_on % 3 == 0
-      return "k2, p1"
-    elsif cast_on % 5 == 0
-      return "k3, p2"
-    else
-    # Change this to return custom information about custom ribbing
-      return "OH NEWTS! I couldn't come up with a multiple of 2, 3, 4, or 5; you must come up with your own custom"
-    end 
+  def ribbing_needle
+    @needle_array = ["1.75mm", "2mm", "2.25mm", "2.5mm", "2.75mm", "3mm",
+                    "3.25mm", "3.5mm", "3.75mm", "4mm", "4.25mm", "4.5mm",
+                    "5mm", "5.5mm", "6mm", "6.5mm", "7mm", "7.5mm", "8mm",
+                    "9mm", "10mm", "12.75mm", "15mm", "19mm", "25mm"]
+
+    @ribbing_needle_index = @needle_array.index("#{@needle.to_s}mm") - 2
+    @ribbing_needle = @needle_array.values_at(@ribbing_needle_index)
+  end
+
+  def cast_on
+    @cast_on = @gauge_inch.to_i * @circumference.to_i
   end 
 
-    # Private
+  def cast_on_10
+    return @cast_on if @cast_on % 10 == 0
+  end
+
+  def cast_on_9
+    return @cast_on if @cast_on % 9 == 0
+  end 
+
+  def cast_on_8
+    return @cast_on if @cast_on * 8 == 0
+  end
+
+  def cast_on_round
+    if @cast_on % 10 != 0 && @cast_on % 9 != 0 && @cast_on % 8 != 0
+      
+      round_10 = @cast_on + 10 - (@cast_on % 10) 
+      round_9 = @cast_on + 9 - (@cast_on % 9) 
+      round_8 = @cast_on + 8 - (@cast_on % 8) 
+
+      round_ary = [round_10, round_9, round_8]
+      
+      @cast_on = round_ary.min # Pulling the smallest rounded multiple         
+    end
+  end 
+
+  # Private
   def ribbing_rows
     @gauge_row.to_i * 2 # 2 inches for all sizes
   end
@@ -48,7 +66,7 @@ class Hat
     # Work until hat measures from crown
     return "1 inch" if baby.include?(circumference.to_i)
     return "1.5 inches" if child.include?(circumference.to_i)
-    @height = "2 inches" if adult.include?(circumference.to_i)
+    return "2 inches" if adult.include?(circumference.to_i)
   end
 
   # Private
@@ -56,7 +74,7 @@ class Hat
     # math for crown decreases
   end
 
-  # Public?
+  # Public
   def pattern
     # Grab user input
     puts "What size mm needle are you using? Don't use decimals unless needed."
@@ -76,11 +94,7 @@ class Hat
     # Legend table
     abbrevs = [ "k: knit", "p: purl", "m: marker", "sl: slip",
                 "pm: place marker", "slm: slip marker", "k2tog: knit two together",
-                "ssk: slip, slip, knit two slipped stitches together", "co: cast on",
-                "bo: bind off", "st/s: stitch/es", "rpt/s: repeat/s" ]
-
-    # Error table
-    errors = ["size: circumference not a valid number, height cannot be calculated"]
+                "co: cast on", "bo: bind off", "st/s: stitch/es", "rpt/s: repeat/s" ]
 
     # Pattern print out
     puts "\n- - - - - - - - - - - - - - - - - - - - - - -"
@@ -92,12 +106,10 @@ class Hat
     puts abbrevs.sort
     puts "\n- - - - - - - - - - - - - - - - - - - - - - -"
     puts "\nDirections:"
-    puts "Using one needle size smaller than required for gauge, co #{cast_on} sts, pm and join for knitting in the round."
-    puts "Work in #{ribbing_type} ribbing for approximately 2 inches (#{ribbing_rows} rows)."
-    puts "Change to #{needle} mm needle. Work in stockinette st (k all sts, all rows) until hat measures #{height} from crown."
+    puts "Using #{ribbing_needle}, co #{cast_on} sts, pm and join for knitting in the round."
+    puts "Work in ribbing or edging of your choice for approximately 2 inches (#{ribbing_rows} rows)."
+    puts "Change to #{@needle} mm needle. Work in stockinette st (k all sts, all rows) until hat measures #{height} from crown."
     puts "\n- - - - - - - - - - - - - - - - - - - - - - -"
-    puts "\nError legend:"
-    puts errors.sort
   end
 
 end

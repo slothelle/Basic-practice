@@ -26,11 +26,11 @@ class RockPaperScissors
   end
 
   def play 
-    victory = "You win! The computer picked #{@computer}, and you picked #{@user}, which is superior."
-    defeat = "You lose! Womp Womp. The computer picked #{@computer}, and you picked #{@user}, which is inferior."
-
     puts "Do you choose rock, paper, or scissors?"
     @user = gets.chomp
+    
+    victory = "You win! The computer picked #{@computer}, and you picked #{@user}, which is superior."
+    defeat = "You lose! Womp Womp. The computer picked #{@computer}, and you picked #{@user}, which is inferior."
 
     if @user == @computer
       @result = "Ladies and gentlemen, we have a tie. The computer picked #{user}, too!"
