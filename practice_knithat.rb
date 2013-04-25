@@ -38,7 +38,7 @@ class Hat
   end 
 
   def cast_on_8
-    return @cast_on if @cast_on * 8 == 0
+    return @cast_on if @cast_on % 8 == 0
   end
 
   def cast_on_round
