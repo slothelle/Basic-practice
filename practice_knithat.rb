@@ -13,6 +13,9 @@ class Hat
   end
 
   def ribbing_needle
+    # This won't work for extreme needle sizes or very small needles.
+    # Consider changing this to a hash with key value pairs assigned by me?
+
     @needle_array = ["1.75mm", "2mm", "2.25mm", "2.5mm", "2.75mm", "3mm",
                     "3.25mm", "3.5mm", "3.75mm", "4mm", "4.25mm", "4.5mm",
                     "5mm", "5.5mm", "6mm", "6.5mm", "7mm", "7.5mm", "8mm",
