@@ -34,6 +34,6 @@ puts "c.slice(2..5): #{c.slice(2..5)}" # [4, 765, 90, 8]
 puts "c[1..4]: #{c[1..4]}" # [432, 4, 765, 90]
 
 d = %w{what happens when you delete from an array oh nooooo life is over}
-d.slice!(3..6)
-puts d # what happens when array oh nooooo life is over
+d.slice!(3..7)
+puts d # what happens when oh nooooo life is over
 
