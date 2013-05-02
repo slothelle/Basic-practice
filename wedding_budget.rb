@@ -31,6 +31,8 @@ class WeddingBudget
   end
 
   def update_item_name(item, new_item_name)
+    # What are the consequences of deleting a key/value pair
+    # and creating a new one? 
     if @my_budget.has_key?(item.to_sym)
       cost = @my_budget.fetch(item.to_sym)
       @my_budget.delete(item.to_sym)
