@@ -27,7 +27,6 @@ class WeddingBudget
     else
       puts "Girl, #{item} isn't in your budget. You need to add it!"
     end
-
   end
 
   def update_item_name(item, new_item_name)
@@ -52,7 +51,6 @@ class WeddingBudget
     else 
       puts "Hey bridezilla! You can't remove #{item} from your budget, it doesn't exist."
     end 
-
   end
 
   def item_cost_lookup(item)
@@ -84,6 +82,7 @@ class WeddingBudget
     puts "You've budgeted to spend $#{total_spent} (so far)."
   end
 
+  puts "You're getting hitched, bitch! Lets make a budget."
 end
 
 fitz_wedding = WeddingBudget.new(20000)
