@@ -12,20 +12,26 @@ class PuppyGotchi
       full_puppy
     else 
       @puppy_belly = @puppy_belly + 1
+      puts "You feed #{name}."
     end 
   end
 
   def water_puppy
+    if @puppy_bladder == 10
+      passing_time
+    else 
+      @puppy_bladder = @puppy_bladder + 1
+      puts "You can #{name} some water."
+    end 
   end 
 
-  def play_with_puppy
-  end
+  def puppy_bathroom_tinkle
+    # Take puppy outside and empty bladder
+  end 
 
-  def sick_puppy
-  end
-
-  def dead_puppy
-  end
+  def puppy_bathroom_poopy
+    # Take puppy outside and empty bowels 
+  end 
 
   def puppy_sleeps
     puts "#{name} is sleeping."
@@ -39,7 +45,7 @@ class PuppyGotchi
         passing_time
       end
     end 
-    
+
   end 
 
   private
@@ -58,6 +64,10 @@ class PuppyGotchi
 
   def puppy_poopy?
     @puppy_bowels >= 8
+  end
+
+  def dead_puppy
+    # Puppy has no food and belly and is dead 
   end
 
   def passing_time
