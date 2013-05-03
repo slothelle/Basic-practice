@@ -1,3 +1,5 @@
+# Not done yet... 
+
 class PuppyGotchi
   def initialize(name)
     @name = name 
@@ -41,7 +43,7 @@ class PuppyGotchi
       if @puppy_awake = false
         passing_time
       end 
-      
+
       if @puppy_awake
         passing_time
       end
@@ -77,7 +79,7 @@ class PuppyGotchi
       @puppy_bowels = @puppy_bowels + 1
       @puppy_bladder = @puppy_bladder + 1
     elsif @puppy_belly == 1
-      # Wake up puppy and demand to be fed
+      @puppy_awake = true 
     else 
       # Puppy is starving
       # Puppy doesn't wake up, it's dead
