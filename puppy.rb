@@ -41,6 +41,7 @@ class PuppyGotchi
       if @puppy_awake = false
         passing_time
       end 
+      
       if @puppy_awake
         passing_time
       end
