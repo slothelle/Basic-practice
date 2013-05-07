@@ -14,7 +14,10 @@ def hide_all_ssns(string)
   string.gsub(/\d{3}\-\d{2}\-/, "XXX-XX-")
 end
 
-def format_ssns(string)
+def format_ssns(string)  
+  if string.match(/\b\d{9}\b/)
+    string.gsub!(/(\d{3})(\d{2})(\d{4})/, '\1-\2-\3')
+  end 
+  
   string.gsub(/\./, "-")
-  # Need to find a way to make 480014430 into 480-01-4430
 end
