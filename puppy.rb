@@ -1,12 +1,10 @@
-# Not done yet... 
-
 class PuppyGotchi
   def initialize(name)
     @name = name 
     @puppy_belly = 10
     @puppy_bladder = 0
     @puppy_bowels = 0
-    @puppy_awake = true
+    @puppy_is_sleeping = true
   end 
 
   def feed_puppy
@@ -14,7 +12,7 @@ class PuppyGotchi
       full_puppy
     else 
       @puppy_belly = @puppy_belly + 1
-      puts "You feed #{name}."
+      puts "You feed #{@name}."
     end 
   end
 
@@ -23,37 +21,40 @@ class PuppyGotchi
       passing_time
     else 
       @puppy_bladder = @puppy_bladder + 1
-      puts "You can #{name} some water."
+      puts "You gave #{@name} some water."
     end 
   end 
 
   def puppy_bathroom_tinkle
-    # Take puppy outside and empty bladder
+    if @puppy_bladder <= 7 
+      @puppy_bladder = 0
+      puts "#{@name} went tinkle. Hooray for parenting!"
+    else 
+      puts "#{@name} doesn't need to pee. Isn't potty training so joyous?"
+    end 
   end 
 
   def puppy_bathroom_poopy
-    # Take puppy outside and empty bowels 
+    if @puppy_bowels <= 9
+      @puppy_bowels = 0
+      puts "#{@name} has pooped. OUTSIDE. Celebrate your victory."
+    else 
+      puts "#{@name} doesn't need to poop. Better keep an eye on that wiggly butt."
+    end 
   end 
 
   def puppy_sleeps
-    puts "#{name} is sleeping."
-    @puppy_awake = false 
+    puts "#{@name} is sleeping."
+    @puppy_is_sleeping = true 
 
     3.times do 
-      if @puppy_awake = false
-        passing_time
-      end 
-
-      if @puppy_awake
-        passing_time
-      end
+      passing_time
     end 
-
   end 
 
   private
   def full_puppy
-    puts "#{name} is full and doesn't want any food."
+    puts "#{@name} is full and doesn't want any food."
     puppy_sleeps
   end 
 
@@ -70,7 +71,7 @@ class PuppyGotchi
   end
 
   def dead_puppy
-    # Puppy has no food and belly and is dead 
+    puts "You are a horrible pet owner. You have starved #{@name} to death. No more poopers for you!"
   end
 
   def passing_time
@@ -79,24 +80,39 @@ class PuppyGotchi
       @puppy_bowels = @puppy_bowels + 1
       @puppy_bladder = @puppy_bladder + 1
     elsif @puppy_belly == 1
-      @puppy_awake = true 
+      @puppy_is_sleeping = false 
     else 
-      # Puppy is starving
-      # Puppy doesn't wake up, it's dead
+      dead_puppy
     end 
 
-    if @puppy_bowels == 10 || @puppy_bladder == 10
-      # Puppy has accident 
+    if @puppy_bowels == 10
+      @puppy_bowels = 0
+      puts "#{@name} just took a huge deuce in your favorite suede shoes. That's what you get for leaving them out!"
+    end
+
+    if @puppy_bladder == 10
+      @puppy_bladder = 0
+      puts "#{@name} just went pee all over your $5,000 carpet. This is the definition of love. Go clean it up and learn from your mistakes."
     end
 
     if puppy_hungry?
-      # Puppy wakes up and demands to be fed
+      @puppy_is_sleeping = false
+      puts "#{@name} wakes up and demands to be fed."
     end 
 
-    if puppy_poopy? || puppy_tinkle?
-      # Puppy wakes up and demands to go potty
-    end 
+    if puppy_poopy?
+      @puppy_is_sleeping = false
+      puts "#{@name} wakes up and urgently needs to poo."
+    end
 
+    if puppy_tinkle?
+      @puppy_is_sleeping = false
+      puts "#{@name} is awake! They need to pee. Really badly. You better get on that."
+    end 
   end 
 
 end
+
+poopers = PuppyGotchi.new("Kiwi")
+poopers.feed_puppy
+poopers.puppy_bathroom_tinkle
