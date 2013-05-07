@@ -5,6 +5,7 @@ class PuppyGotchi
     @puppy_bladder = 0
     @puppy_bowels = 0
     @puppy_is_sleeping = true
+    puts "Congrats! You are now the proud owner of a pissing machine, lil #{@name}."
   end 
 
   def feed_puppy
