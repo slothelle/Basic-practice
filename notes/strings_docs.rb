@@ -1,20 +1,24 @@
-#combining strings to see how they function together/separately
-#practice from ruby docs
-#http://www.ruby-doc.org/core-1.9.3/String.html
+# http://ruby-doc.org/core-2.0/String.html
 
-#always using to puts to display result in console
+# always using to puts to display result in console
 
-#replacing characters in str
-#gsubreplaces ALL instances of pattern
-#sub replaces only first instance of the pattern
-g = "my little ponies"
-puts g.gsub(/[p]/, 't')
-puts g.gsub(/[my]/, 'm' => 'you', 'y' => 'r')
-puts g.gsub(/[pon]/, 'p' => 'ba', 'o' => 'r', 'n' => 'b')
-puts g.sub(/[i]/, 'a')
-puts '---'
-puts g.replace "coffee cup"
-puts g.tr('up', 'at')
-puts g.tr('a-y', 'b-z')
-puts g.tr_s('fe', 're')
-#it to_str is shorter than from_str, you're SOL
+# str % arg -> new_str
+# Uses str as a format specification, returns the result of applying it to arg.
+# If format specification contains 1+ substitutions, arg must be an array or hash.
+
+str = 2
+
+puts "%cats" % str 
+# ats 
+
+#
+
+# str * integer -> new_str
+# Returns a new string containing integer copies of the receiver. Integer must be >= 0.
+
+puts "Hello little lady" * 3
+# Hello little ladyHello little ladyHello little lady
+
+#
+
+# 
