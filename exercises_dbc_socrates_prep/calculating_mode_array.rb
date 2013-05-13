@@ -4,5 +4,12 @@
 #If there's only one most-frequent value, it returns a single-element Array.
 
 def mode(array)
-  array.max_by { |num| array.count(num)}
+  mode = []
+  array.sort_by! { |num| array.count(num) }
+  mode << array.last
+  mode
 end
+
+my_array = [1, 2, 6, 2, 8, 3, 6, 9, 6, 9, 6]
+
+mode(my_array)
