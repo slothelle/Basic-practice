@@ -1,0 +1,30 @@
+>>> Core
+X Design Drill: Translate to Pseudocode
+X Ruby Drill: Enumerable Methods
+X Pig Latin
+X Algorithm Drill: Shuffle
+X Ruby Drill: Regular Expressions
+X Benchmarking with Blocks
+X Ruby Drill: Destructive Methods
+
+> After lunch:
+Enacting Enumerables
+
+>>> Done with core? Help a fellow boot!
+
+>>> Reflect and Stretch
+MANDATORY - do at least 1 of below (Redo Solo, Review/Refactor, or Stretch).
+
+>>> Redo Solo
+Any drill that is unclear
+X Pig-latin
+Algorithm Drill: Shuffle
+
+>>> Review Others Refactor Yours
+Pig-latin
+Ruby Drill: Destructive Methods
+
+>>> Stretch
+Numbers in Words
+Words in a File
+Combating Smells: Extract Method
