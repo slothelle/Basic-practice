@@ -1,0 +1,12 @@
+#### For mentors
+What do I want out of my relationship with my mentors? 
+* Feedback about my code and suggestions for improvement
+* Suggested readings on refactoring and readability
+
+#### For myself
+What do I want? Long term and short term. 
+* Week 1: divide battleship up into reasonable pieces; try and knock out some pieces
+* Week 1: be less terrified of subarrays, associative arrays (not so bad)
+* Phase 1: not get sick or fall asleep at my computer
+* Long term: become actively involved in the women's Ruby community
+* Long term: contribute to a mentorship program
