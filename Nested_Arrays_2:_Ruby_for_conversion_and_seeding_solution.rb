@@ -1,1 +1,11 @@
-# Solution for Challenge: Nested Arrays 2: Ruby for conversion and seeding. Started 2013-05-16T17:17:26+00:00
+def build_tictac_board(amount=1)
+  amount.times do
+    letters = ["X", "X", "X", "X", "X", "O", "O", "O", "O", "O"].shuffle
+    board = Array.new(3) { letters.shift(3) }
+    board.each { |subarray| print "#{subarray.join("  |  ")}\n" }
+    puts ""
+  end 
+end 
+
+build_tictac_board(10)
+
