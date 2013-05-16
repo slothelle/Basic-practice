@@ -1,0 +1,36 @@
+>>> Core
+> Pair 1: Jason
+*** Algorithm Drill: Factorial
+*** The Fibonacci Sequence
+*** Recursion vs. Iteration: Benchmark it! 
+
+> Pair 2: Karsten
+*** Algorithm Drill: Prime Factors (Not happy with it...)
+
+> Solo
+Anagrams 1: Detecting Anagrams
+Anagrams 2: Generating Anagrams
+Algorithm Drill: Linear Search
+Algorithm Drill: Binary Search
+
+>>> Reflect and Stretch
+MANDATORY - do at least 1 of below (Redo Solo, Review/Refactor, or Stretch).
+
+> Redo Solo
+Any drill or challenge that is unclear
+The Fibonacci Sequence
+Anagrams 1: Detecting Anagrams
+Algorithm Drill: Binary Search
+
+> Review Others Refactor Yours
+Algorithm Drill: Linear Search
+Algorithm Drill: Binary Search
+Recursion vs. Iteration: Benchmark it!
+
+> Stretch
+Advanced Calculator
+Ruby Meets Samuel Beckett
+Linear vs. Binary Search
+Prime Factors: Sieve of Eratosthenes
+Ruby Drill: Control Flow in Loops
+Performance Journaling
