@@ -1,0 +1,20 @@
+Core
+x Ruby Drill: ARGV Basics
+x Design Drill: Classical Inheritance
+Cookies and Ovens
+Parsing Data 1
+Hospital Interface
+Done with core? Help a fellow boot!
+
+Reflect and Stretch
+MANDATORY - do at least 1 of below (Redo Solo, Review/Refactor, or Stretch).
+
+Redo Solo
+Any drill or challenge that is unclear
+Cookie and Ovens
+Parsing Data 1
+Review Others Refactor Yours
+Cookies and Ovens
+Parsing Data 1
+Stretch
+Parsing Data 2
