@@ -1,0 +1,20 @@
+Core
+Scraping HN 1
+Design Drill: Argument-Order Dependency
+World's Dumbest Browser
+Done with core? Help a fellow boot!
+
+Reflect and Stretch
+MANDATORY - do at least 1 of below (Redo Solo, Review/Refactor, or Stretch).
+
+Redo Solo
+Any drill or challenge that is unclear
+Scraping HN 1
+World's Dumbest Browser
+Review Others Refactor Yours
+Scraping HN 1
+World's Dumbest Browser
+Stretch
+Scraping HN 2
+The Rational Numbers
+Design Drill: Terminology of Object-Oriented Programming

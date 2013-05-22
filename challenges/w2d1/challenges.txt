@@ -1,0 +1,24 @@
+Core
+x Ruby Drill: Accessor Methods
+x Design Drill: Public vs. Private Interfaces
+x Ruby Drill: The self Keyword
+x Ruby Drill: Exploring Scope
+Orange Tree 1: Just Oranges
+Review Others, Refactor Yours - Week 1 Review
+Done with core? Help a fellow boot!
+
+Reflect and Stretch
+MANDATORY - do at least 1 of below (Redo Solo, Review/Refactor, or Stretch).
+
+Redo Solo
+Any drill or challenge that is unclear
+Ruby Drill: Exploring Scope
+Orange Tree 1: Just Oranges
+
+Review Others Refactor Yours
+Orange Tree 1: Just Oranges
+Review Others, Refactor Yours - Week 1 Review
+
+Stretch
+Orange Tree 2: Groves
+Practicing POODR: read POODR throughout the week. For each chapter, apply the concept to your code.

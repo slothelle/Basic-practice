@@ -6,4 +6,8 @@ class Patient
     @id = id
     @ailment = ailment
   end
+
+  def access_level
+    :patient
+  end 
 end 

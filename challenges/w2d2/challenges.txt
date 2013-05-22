@@ -1,8 +1,8 @@
 Core
 x Ruby Drill: ARGV Basics
 x Design Drill: Classical Inheritance
-Cookies and Ovens
-Parsing Data 1
+x Cookies and Ovens
+x Parsing Data 1
 Hospital Interface
 Done with core? Help a fellow boot!
 
@@ -13,8 +13,10 @@ Redo Solo
 Any drill or challenge that is unclear
 Cookie and Ovens
 Parsing Data 1
+
 Review Others Refactor Yours
 Cookies and Ovens
 Parsing Data 1
+
 Stretch
 Parsing Data 2

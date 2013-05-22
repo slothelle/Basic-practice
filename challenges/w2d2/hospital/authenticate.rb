@@ -16,7 +16,6 @@ class AuthenticationSystem
     elsif @authenticated_user.access_level == :none
       boot
     end
-    action = gets.chomp
   end
 
   private
@@ -37,16 +36,16 @@ class AuthenticationSystem
 
   def access_admin
     puts "ADMINISTRATIVE PRIVILEGES:"
-    puts "\t* @hospital.add_employee"
-    puts "\t* @hospital.list_employees"
+    puts "\t* add_employee"
+    puts "\t* list_employees"
     puts ""
     access_doctor
   end
 
   def access_doctor
     puts "DOCTOR PRIVILEGES:"
-    puts "\t* @hospital.add_patient"
-    puts "\t* @hospital.list_patients"
+    puts "\t* add_patient"
+    puts "\t* list_patients"
   end
 
   def access_view
