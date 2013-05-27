@@ -1,0 +1,32 @@
+Core
+x Database Drill: SQL Tutor
+x University Course Database Design
+x Family Tree Database Design
+Schema Group Review
+X Database Drill: Intro to SQLite
+Database Drill: SQLite Shell Part 1
+Database Drill: SQLite Shell Part 2
+Review Others, Refactor Yours - The Wheels on the Bus
+
+Done with core? Help a fellow boot!
+
+Reflect and Stretch
+MANDATORY - do at least 1 of below (Redo Solo, Review/Refactor, or Stretch).
+
+Redo Solo
+Any drill or challenge that is unclear
+Database Drill: SQL Tutor
+University Course Database Design
+Database Drill: SQLite Shell Part 1
+
+Review Others Refactor Yours
+University Course Database Design
+Family Tree Database Design
+Database Drill: SQLite Shell Part 1
+
+Stretch
+Multi-Author Blog Database Design
+IMDB Database Design
+Reddit Jr Database Design
+Forum Database Design
+Design Your Own Many to Many
