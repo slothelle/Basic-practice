@@ -1,0 +1,40 @@
+PIECES:
+
+(1) keys == table[0][0-4]
+Each element from table[0] should become a key in EACH subhash.
+
+(2) values == table[1-5][0-4]
+Each element from the subarray should be assigned to the keys.
+
+BASIC IDEA IN NORMAL HUMAN
+
+table[0][0] is the key for table[1][0], table [2][0], etc
+table[0][1] is the key for table[1][1], table [2][1], etc
+
+To build the hash in the right order, we need to:
+1. Make a hash
+2. Add a key, followed by its value
+3. Repeat 2 until completed
+4. Increment a counter
+
+USE A LOOP!
+
+Create a new nested table called hashed_data_table
+
+while next_array > table.length+1
+  new_hash = {}
+  next_array = 1
+
+    while next_index > table[0.length+1]
+      next_index = 0
+
+      new_hash[table[0][next_index]] = (table[next_array][next_index)]
+      next_index += 1
+    end
+
+    hashed_data_table << new_hash 
+
+    next_array += 1
+    new_hash = {}
+end 
+
